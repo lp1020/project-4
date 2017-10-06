@@ -3,7 +3,7 @@
 ## **Cruelty-Free-4-Me**
 ### **Your destination for all things cruelty-free!** 
 
-This is an application that allows the user to view an open source community listing of cruelty-free and non-cruelty-free brands as well as vegan and vegetarian restaurants near their location. It will feature full CRUD functionality as well as a 3rd-party API call which will list restaurants near them as well as the precise location on Google Maps. Users will be able to register and log in, view, save, and delete their favorite restaurants, and view, add, update, or delete entries in both the cruelty-free and non-cruelty-free listings.
+This is an application that allows the user to view an open source community listing of cruelty-free and non-cruelty-free brands as well as vegan and vegetarian restaurants near their location. It will feature full CRUD functionality as well as a 3rd-party API call which will list restaurants near them and the precise location on Google Maps. Users will be able to register and log in, view, save, and delete their favorite restaurants, and view, add, update, or delete entries in both the cruelty-free and non-cruelty-free listings.
 
 
 ### **TECHNOLOGIES**
