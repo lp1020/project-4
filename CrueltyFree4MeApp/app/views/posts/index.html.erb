@@ -1,7 +1,7 @@
 
 <%= link_to "Add a post", new_post_url %>
 
-<h1>Your Posts</h1>
+<h1>Your Entries</h1>
 <% @posts.where(user_id: current_user.id).each do |post| %>
   <div>
     <h4><%= post.name %></h4>
@@ -9,17 +9,21 @@
     <p><%= @category.where(id: post.category_id).pluck(:name).first %></p>
 
     <p>Cruelty Free? <%= post.is_cruelty_free.to_s.capitalize %></p>
-    <a href=<%= post.link %>>Link to Homepage</a>
+    <a href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
+    <p>Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+    <h3 class="postLink"><%= link_to post.name, post_path(post) %></h3>
   </div>
 <% end %>
 
-<h1>Other Posts</h1>
+<h1>Other Entries</h1>
 <% @posts.where.not(user_id: current_user.id).each do |post| %>
   <div>
     <h4><%= post.name %></h4>
-    <p><%= @category.name %></p>
-    <p><%= post.is_cruelty_free.to_s.capitalize %></p>
-    <p><%= post.link %></p>
+    <p><%= @category.where(id: post.category_id).pluck(:name).first %></p>
+    <p>Cruelty Free? <%= post.is_cruelty_free.to_s.capitalize %></p>
+    <a href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
     <p><%= "By: #{post.user.email}" %></p>
+    <p>Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+
   </div>
 <% end %>

@@ -1,0 +1,12 @@
+ <div>
+    <h4><%= @post.name %></h4>
+
+    <p><%= @category.name %></p>
+
+    <p>Cruelty Free? <%= @post.is_cruelty_free.to_s.capitalize %></p>
+    <a href=<%= @post.link %>>Go to <%= @post.name %> Homepage</a>
+    <p>Posted at: <%= @post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+  <div class="linkName"><%= link_to 'Edit this Entry!', edit_post_path %></div>
+  </div>
+<div class="linkName"><%= link_to 'Delete this Entry!', post_path(@post), method: :delete,
+  data: { confirm: "Are you sure you want to delete #{@post.name}?" } %></div>
