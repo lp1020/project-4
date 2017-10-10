@@ -1,0 +1,41 @@
+<h1>Add a post</h1>
+
+<form action="<%= posts_url %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+
+  <label for="name">Company Name</label>
+  <br>
+  <input id="name" type="text" name="post[name]" />
+
+  <br>
+  <label for="category_id">Category
+  <!-- <textarea id="category" name="post[category_id]"></textarea> -->
+  <select name="post[category_id]" type="text" id="category">
+    <option value='null'>Select</option>
+    <option value='1'>Cosmetics</option>
+    <option value='2'>Skincare</option>
+    <option value='3'>Household/Cleaning</option>
+    <option value='4'>Fragrance</option>
+    <option value='5'>Body Care</option>
+    <option value='6'>Hair Care</option>
+    <option value='7'>Personal Care</option>
+    <option value='8'>Animal Care</option>
+  </select>
+</label>
+<br>
+  <label for="is_cruelty_free">Cruelty Free?
+  <select name="post[is_cruelty_free]" type="text" id="iscrueltyfree">
+    <option value='null'>Select</option>
+    <option value='true'>Cruelty-Free</option>
+    <option value='false'>NOT Cruelty-Free</option>
+  </select>
+    </label>
+    <br>
+  <!-- <input id="is_cruelty_free" type="text" name="post[is_cruelty_free]" /> -->
+  <br>
+  <label for="link">Link to Company Homepage</label>
+  <br>
+  <input id="link" type="text" name="post[link]" />
+  <br>
+  <input type="submit" value="Save" />
+</form>

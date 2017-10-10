@@ -1,0 +1,25 @@
+
+<%= link_to "Add a post", new_post_url %>
+
+<h1>Your Posts</h1>
+<% @posts.where(user_id: current_user.id).each do |post| %>
+  <div>
+    <h4><%= post.name %></h4>
+
+    <p><%= @category.where(id: post.category_id).pluck(:name).first %></p>
+
+    <p>Cruelty Free? <%= post.is_cruelty_free.to_s.capitalize %></p>
+    <a href=<%= post.link %>>Link to Homepage</a>
+  </div>
+<% end %>
+
+<h1>Other Posts</h1>
+<% @posts.where.not(user_id: current_user.id).each do |post| %>
+  <div>
+    <h4><%= post.name %></h4>
+    <p><%= @category.name %></p>
+    <p><%= post.is_cruelty_free.to_s.capitalize %></p>
+    <p><%= post.link %></p>
+    <p><%= "By: #{post.user.email}" %></p>
+  </div>
+<% end %>
