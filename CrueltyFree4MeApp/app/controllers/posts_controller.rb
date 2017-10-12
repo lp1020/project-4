@@ -24,12 +24,9 @@ def edit
 
 end
 def update
-
-  # puts @post
-   #post.update!
   respond_to do |format|
     if @post.update(post_params)
-      format.html { redirect_to post_ur, notice: "Post was successfully updated."}
+      format.html { redirect_to post_url, notice: "Post was successfully updated."}
     else
       format.html { render :edit }
     end
