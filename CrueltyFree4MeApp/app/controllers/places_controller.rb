@@ -36,10 +36,10 @@ class PlacesController < ApplicationController
     respond_to do |format|
       if @place.save
         format.html { redirect_to @place, notice: 'Place was successfully created.' }
-        format.js
+        format.js {}
       else
         format.html { render :new }
-        format.js
+        format.js {}
       end
     end
   end
@@ -76,6 +76,6 @@ class PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :address, :latitude, :longitude)
+      params.require(:place).permit(:name, :address)
     end
 end
