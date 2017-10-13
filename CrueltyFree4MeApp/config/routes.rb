@@ -7,7 +7,7 @@ root 'welcome#index'
       put :get_locations
     end
 end
-
+resources :categories, only: [:index, :show]
   devise_for :users
 
   resources :users do

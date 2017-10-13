@@ -28,6 +28,7 @@ $(document).on('turbolinks:load', @getPlaces)
           address: data['vicinity']
           latitude: data['geometry']['location']['lat']
           longitude: data['geometry']['location']['lng']
+          place_id: data['place_id']
         }
       }
   success: (data, status) ->

@@ -1,0 +1,7 @@
+<% @categories.each do |c| %>
+
+<h3 class="catName"><%= link_to c.name, category_path(c) %></h3>
+<p><%= @post.where(category_id: c.id).pluck(:name).first%></p>
+
+<% end %>
+<h3 class="catName"><%= link_to 'See all posts', posts_path %></h3>

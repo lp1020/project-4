@@ -20,8 +20,14 @@
   <%= @place.longitude %>
 </p>
 
+<p>
+  <strong>id:</strong>
+  <%= @place.place_id %>
+</p>
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
 <br/>
 <br/>
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=650x500&sensor=false&zoom=16&markers=#{@place.latitude}%2C#{@place.longitude}" %>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=650x500&sensor=false&zoom=16&markers=#{@place.latitude}%2C#{@place.longitude}"%>
+<a href= <%="https://www.google.com/maps/search/?api=1&query=#{@place.latitude}%2C#{@place.longitude}&query_place_id=#{@place.place_id}"%>> Go to Google Maps Page </a>
