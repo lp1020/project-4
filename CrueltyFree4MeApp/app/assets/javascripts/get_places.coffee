@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', @getPlaces)
           longitude: data['geometry']['location']['lng']
         }
       }
-      success: (data, status) ->
+  success: (data, status) ->
         console.log 'Data: ' + data + '\nStatus: ' + status
 
     event.preventDefault()
