@@ -5,6 +5,7 @@ root 'welcome#index'
   resources :places do
     collection do
       put :get_locations
+      put :get_stores
     end
 end
 resources :categories, only: [:index, :show]

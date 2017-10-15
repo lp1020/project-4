@@ -1,0 +1,4 @@
+<% @stores.each do |store| %>
+  $('.location_results_list').append('<li><button data-attributes="<%= j store.to_json.to_s %>"><%= store[:name] %></button><%= store[:vicinity] %></li>');
+<% end %>
+createPlace();

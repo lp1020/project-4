@@ -1,9 +1,24 @@
-<% @posts.each do |post| %>
+
+<h1>Cruelty-Free Brands</h1>
+<% @posts.where(is_cruelty_free: true).each do |post| %>
   <div>
     <h3 class="postLink"><%= link_to post.name, post_path(post) %></h3>
   <p><%= @category.where(id: post.category_id).pluck(:name).first %></p>
     <p>Cruelty Free? <%= post.is_cruelty_free.to_s.capitalize %></p>
     <a href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
     <p>Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+    <p>Updated at: <%= post.updated_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+  </div>
+<% end %>
+
+<h1>Brands That Test On Animals</h1>
+<% @posts.where(is_cruelty_free: false).each do |post| %>
+  <div>
+    <h3 class="postLink"><%= link_to post.name, post_path(post) %></h3>
+  <p><%= @category.where(id: post.category_id).pluck(:name).first %></p>
+    <p>Cruelty Free? <%= post.is_cruelty_free.to_s.capitalize %></p>
+    <a href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
+    <p>Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+    <p>Updated at: <%= post.updated_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
   </div>
 <% end %>

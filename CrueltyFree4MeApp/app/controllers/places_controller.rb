@@ -2,10 +2,17 @@ class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
 
   def get_locations
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{params[:latitude]},#{params[:longitude]}&radius=500&type=restaurant&keyword=vegetarian&key=#{Rails.application.secrets.google_places_key}"
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{params[:latitude]},#{params[:longitude]}&radius=1500&type=store&keyword=cruelty+free&key=#{Rails.application.secrets.google_places_key}"
     http_call = open(url).read
     response = JSON.parse(http_call, {:symbolize_names => true})
     @locations = response[:results]
+  end
+
+   def get_stores
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{params[:latitude]},#{params[:longitude]}&radius=1500&type=store&keyword=cruelty+free&key=#{Rails.application.secrets.google_places_key}"
+    http_call = open(url).read
+    response = JSON.parse(http_call, {:symbolize_names => true})
+    @stores = response[:results]
   end
 
   # GET /places
@@ -32,7 +39,7 @@ class PlacesController < ApplicationController
   # POST /places.json
   def create
     @place = Place.create(place_params)
-
+     @place.user = current_user
     respond_to do |format|
       if @place.save
         format.html { redirect_to @place, notice: "#{@place.name} was successfully created." }

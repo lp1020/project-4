@@ -14,11 +14,12 @@
   </thead>
 
   <tbody id='places'>
-    <%= render @places  %>
+    <%= render @places.where(user_id: current_user.id)  %>
   </tbody>
 </table>
 
 <br>
 <%= link_to 'New Place', new_place_path %>
-<%= content_tag :button, 'Get Places', class: 'btn btn-info get_location' %>
+<%= content_tag :button, 'Find Cruelty-Free Stores Around Me!', class: 'btn btn-info get_location' %>
+<p>Note: Stores listed may not have all cruelty-free products! Always check the brands stores carry to make sure they are cruelty-free.</p>
 <%= tag :div, class: 'location_results_list' %>
