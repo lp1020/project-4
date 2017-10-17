@@ -1,7 +1,13 @@
+<div id="catContainer">
+  <h3 class="catAllPosts"><%= link_to 'View your posts', user_posts_path(current_user) %></h3>
+  <h1 id="catTitle">Categories</h1>
 <% @categories.each do |c| %>
+<div class="catDiv">
+<h3 class="catName"><%= c.name %></h3>
 
-<h3 class="catName"><%= link_to c.name, category_path(c) %></h3>
-<p><%= @post.where(category_id: c.id).pluck(:name).first%></p>
+<p class="catBrand"><%= @posts.where(category_id: c.id).pluck(:name).first%></p>
 
+</div>
 <% end %>
-<h3 class="catName"><%= link_to 'See all posts', posts_path %></h3>
+</div>
+

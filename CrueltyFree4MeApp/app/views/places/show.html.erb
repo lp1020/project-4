@@ -1,28 +1,30 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<a class="googleLink" href= <%="https://www.google.com/maps/search/?api=1&query=#{@place.latitude}%2C#{@place.longitude}"%>> Go to Google Maps Page </a>
+<div class="showPlaceContainer">
+<p class="showTitle">
   <strong>Name:</strong>
   <%= @place.name %>
 </p>
 
-<p>
+<p class="showTitle">
   <strong>Address:</strong>
   <%= @place.address %>
 </p>
 
-<p>
+<p class="showTitle">
   <strong>Latitude:</strong>
   <%= @place.latitude %>
 </p>
 
-<p>
+<p class="showTitle">
   <strong>Longitude:</strong>
   <%= @place.longitude %>
 </p>
 
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+<div class="showLink"><%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %></div>
+</div>
 <br/>
 <br/>
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=650x500&sensor=false&zoom=16&markers=#{@place.latitude}%2C#{@place.longitude}"%>
-<a href= <%="https://www.google.com/maps/search/?api=1&query=#{@place.latitude}%2C#{@place.longitude}"%>> Go to Google Maps Page </a>
+<div class="googleImg"><%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x450&sensor=false&zoom=16&markers=#{@place.latitude}%2C#{@place.longitude}"%></div>
+

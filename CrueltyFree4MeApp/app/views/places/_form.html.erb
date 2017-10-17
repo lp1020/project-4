@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<div class="editDiv">
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :place_name %>
@@ -21,17 +21,8 @@
     <%= form.text_field :address, id: :place_address %>
   </div>
 
-  <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude, id: :place_latitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude, id: :place_longitude %>
-  </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <div id="buttonPlace"><%= form.submit %></div>
   </div>
 <% end %>
+</div>

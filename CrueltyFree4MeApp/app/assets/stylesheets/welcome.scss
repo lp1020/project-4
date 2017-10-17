@@ -1,3 +1,89 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  position: flex;
+background: url('rabbit-2.jpg') no-repeat center center fixed;
+background-size: cover;
+height: 600px;}
+
+#welcomeMessage {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 140px;
+  color: #008f95;
+  font-family: 'Patua One', cursive;
+  font-size: 50px;
+  text-shadow: 1px 1px #2d283e;
+
+  animation: jackInTheBox 5s infinite;
+}
+
+#welcomeEmail{
+  color: #d9d9d9;
+  font-family: 'Arapey', serif;
+  text-shadow: 1px 1px #2d283e;
+}
+
+#welcomeExplain{
+
+  font-size: 30px;
+  color: #eb6e80;
+  font-family: 'Arapey', serif;
+  text-shadow: 1px 1px #2d283e;
+}
+
+#welcomeInfo {
+position: absolute;
+  margin-top: 275px;
+  width: 650px;
+  padding: 7px;
+
+  text-align: center;
+  border-radius: 90px;
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.jackInTheBox {
+  animation-name: jackInTheBox;
+}
+
+.question {
+  text-align: center;
+  color: #f6f084;
+font-family: 'Arapey', serif;
+text-shadow: 1px 1px #2d283e;
+}
+
+.answer {
+  text-align: center;
+font-family: 'Arapey', serif;
+font-size: 18px;
+font-weight: bold;
+}
+
+.about {
+  background-color: rgba(217, 217, 217, 0.5);
+  padding: 7px;
+}
+

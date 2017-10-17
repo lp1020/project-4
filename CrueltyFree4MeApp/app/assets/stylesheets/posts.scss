@@ -1,3 +1,380 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#titleAll {
+  font-size: 44px;
+ font-family: 'Bree Serif', serif;
+ color: #66ab8c;
+ margin-left: 150px;
+ text-shadow: 2px 2px #2d283e;
+}
+#titleAll2 {
+  font-size: 44px;
+  font-family: 'Bree Serif', serif;
+ color:  #e24e42;
+ margin-left: 75px;
+ text-shadow: 2px 2px #2d283e;
+}
+.showLink a {
+  font-size: 26px;
+  color: #4a8dac;
+font-family: 'Passion One', cursive;
+text-shadow: 2px 2px #2d283e;
+}
+
+.showLink a:hover {
+  color: #985e6d;
+}
+
+.postInfo {
+font-family: 'Vollkorn', serif;
+font-size: 16px;
+}
+.postCat {
+  font-family: 'Vollkorn', serif;
+font-size: 18px;
+
+}
+#postBoolean {
+font-family: 'Passion One', cursive;
+float: right;
+font-size: 16px;
+margin-top: -34px;
+margin-right: 170px;
+color: #f6f084;
+text-shadow: 1px 1px #2d283e;
+}
+
+.brandLink {
+font-family: 'Bree Serif', serif;
+color: #985e6d;
+text-shadow: 1px 1px #2d283e;
+}
+
+.brandLink:hover {
+  color: #4a8dac;
+}
+.brandLink2 {
+font-family: 'Bree Serif', serif;
+color: #985e6d;
+text-shadow: 1px 1px #2d283e;
+}
+
+.brandLink2:hover {
+  color: #4a8dac;
+}
+.postContainer {
+  box-shadow: 3px 3px 1px #f6f084;
+  padding: 1px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 500px;
+  background-color: rgba(102, 171, 140, 0.5)
+}
+
+.postContainer2 {
+  box-shadow: 3px 3px 1px #f6f084;
+  padding: 1px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 500px;
+  background-color: rgba(226, 78, 66, 0.5)
+}
+
+.postShowDiv {
+  text-align: center;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 250px;
+}
+
+#postBooleanShow {
+font-family: 'Passion One', cursive;
+float: right;
+font-size: 20px;
+margin-top: -39px;
+margin-right: 50px;
+color: #f6f084;
+text-shadow: 1px 1px #2d283e;
+}
+.indexLink a {
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: -240px;
+  float: right;
+  font-family: 'Vollkorn', serif;
+  font-size: 30px;
+  color: #f6f084;
+  background-color: #eb6e80;
+  border: 4px solid #f6f084;
+}
+
+.indexLink a:hover {
+  background-color: #d9d9d9;
+  text-shadow: 2px 2px #2d283e;
+}
+.postName {
+  margin-bottom: -10px;
+  font-size: 36px;
+  color: #4a8dac;
+font-family: 'Passion One', cursive;
+text-shadow: 2px 2px #2d283e;
+}
+
+.postInfoShow {
+font-family: 'Vollkorn', serif;
+font-size: 20px;
+}
+.postCatShow {
+  font-family: 'Vollkorn', serif;
+font-size: 22px;
+}
+
+.brandLinkShow  {
+  font-size: 22px;
+font-family: 'Bree Serif', serif;
+color: #eb6e80;
+text-shadow: 1px 1px #2d283e;
+}
+
+.brandLinkShow:hover {
+  color: #4a8dac;
+}
+
+.linkName a {
+  padding: 5px;
+  color: #985e6d;
+  font-size: 18px;
+  float: left;
+  position: flex;
+  margin-top: 430px;
+  margin-left: 190px;
+  font-family: 'Arapey', serif;
+  background-color: #d9d9d9;
+  border-radius: 50px;
+}
+
+.linkName a:hover {
+  color: #f6f084;
+  text-shadow: 1px 1px #2d283e;
+}
+.editTitle {
+  font-size: 36px;
+  color: #66ab8c;
+  text-shadow: 2px 2px #2d283e;
+  font-family: 'Bree Serif', serif;
+position: absolute;
+margin-top: 200px;
+margin-left: 250px;
+}
+
+.form-container {
+  text-align: center;
+position: absolute;
+margin-top: 250px;
+margin-left: 325px;
+}
+
+.postForm {
+  font-size: 18px;
+  color: #985e6d;
+  text-shadow: 1px 1px #2d283e;
+  font-family: 'Patua One', cursive;
+}
+
+.postForm input {
+
+  font-family: 'Patua One', cursive;
+  background-color: #f6f084;
+  height: 25px;
+}
+
+#category_id {
+  font-family: 'Patua One', cursive;
+  background-color: #f6f084;
+  height: 25px;
+}
+
+#is_cruelty_free {
+  font-family: 'Patua One', cursive;
+  background-color: #f6f084;
+  height: 25px;
+}
+
+.editButton input {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 'Patua One', cursive;
+  background-color: #d9d9d9;
+}
+
+.editButton input:hover {
+  background-color: #66ab8c;
+}
+
+.postContainer3 {
+  box-shadow: 3px 3px 1px #f6f084;
+  padding: 1px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 500px;
+  background-color: rgba(217, 217, 217, 0.5)
+}
+
+#titleIndex {
+  font-size: 44px;
+ font-family: 'Bree Serif', serif;
+ color: #66ab8c;
+ margin-left: 250px;
+ text-shadow: 2px 2px #2d283e;
+}
+
+#titleIndex2 {
+  font-size: 44px;
+ font-family: 'Bree Serif', serif;
+ color: #66ab8c;
+ margin-left: 250px;
+ text-shadow: 2px 2px #2d283e;
+}
+.categoryView a {
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: 100px;
+  float: right;
+  font-family: 'Vollkorn', serif;
+  font-size: 30px;
+  color: #f6f084;
+  background-color: #eb6e80;
+  border: 4px solid #f6f084;
+}
+.categoryView a:hover {
+  background-color: #d9d9d9;
+  text-shadow: 2px 2px #2d283e;
+}
+.addPost a {
+  position: absolute;
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: 50px;
+  float: right;
+  font-family: 'Vollkorn', serif;
+  font-size: 30px;
+  color: #f6f084;
+  background-color: #eb6e80;
+  border: 4px solid #f6f084;
+  text-shadow: 2px 2px #2d283e;
+}
+
+.addPost a:hover {
+  background-color: #d9d9d9;
+  text-shadow: 2px 2px #2d283e;
+}
+
+.addTitle {
+  font-size: 36px;
+  color: #66ab8c;
+  text-shadow: 2px 2px #2d283e;
+  font-family: 'Bree Serif', serif;
+position: absolute;
+margin-top: 200px;
+margin-left: 350px;
+}
+
+ .addButton{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 'Patua One', cursive;
+  background-color: #d9d9d9;
+}
+
+.addButton:hover {
+  background-color: #66ab8c;
+}
+
+ #name {
+font-family: 'Patua One', cursive;
+  background-color: #f6f084;
+  height: 25px;
+}
+
+ #link {
+  margin-top: 10px;
+  font-family: 'Patua One', cursive;
+  background-color: #f6f084;
+  height: 25px;
+}
+
+#catTitle {
+  font-size: 40px;
+  color: #66ab8c;
+  text-shadow: 2px 2px #2d283e;
+  font-family: 'Bree Serif', serif;
+
+margin-left: 250px;
+}
+.catDiv {
+  text-align: center;
+background-color: rgba(152, 94, 96, 0.5);
+width: 400px;
+height: 100px;
+margin-left: 150px;
+margin-top: 10px;
+}
+
+.catName {
+
+  font-size: 26px;
+  color: #4a8dac;
+font-family: 'Bree Serif', serif;
+text-shadow: 2px 2px #2d283e;
+}
+
+.catName a:hover {
+  color: #f6f084;
+  text-shadow: 2px 2px #2d283e;
+}
+
+.catBrand {
+ font-family: 'Arapey', serif;
+ font-size: 20px;
+}
+.catAllPosts a {
+  padding: 10px;
+  margin-top: 100px;
+  margin-right: 100px;
+  float: right;
+  font-family: 'Vollkorn', serif;
+  font-size: 30px;
+  color: #f6f084;
+  background-color: #eb6e80;
+  border: 4px solid #f6f084;
+
+}
+
+.catAllPosts a:hover {
+  background-color: #d9d9d9;
+  text-shadow: 2px 2px #2d283e;
+}
+
+.addPost2 a {
+  float: right;
+  padding: 10px;
+  margin-top: -1500px;
+  margin-right: 200px;
+  font-family: 'Vollkorn', serif;
+  font-size: 30px;
+  color: #f6f084;
+  background-color: #eb6e80;
+  border: 4px solid #f6f084;
+  text-shadow: 2px 2px #2d283e;
+}
+
+.addPost2 a:hover {
+  background-color: #d9d9d9;
+  text-shadow: 2px 2px #2d283e;
+}

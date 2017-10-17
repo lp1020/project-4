@@ -1,6 +1,6 @@
-<h1>Editing Place</h1>
+<h1 class="editPlaceTitle">Editing <%= "#{@place.name}"%></h1>
 
 <%= render 'form', place: @place %>
 
-<%= link_to 'Show', @place %> |
-<%= link_to 'Back', places_path %>
+<div class="placeLink"><%= link_to 'Show', @place %></div>
+<div class="placeLink2"><%= link_to 'Back', places_path %></div>

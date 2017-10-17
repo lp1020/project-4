@@ -1,3 +1,253 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.placesTitle {
+  position: absolute;
+  margin-top: 250px;
+font-size: 40px;
+  color: #4a8dac;
+font-family: 'Bree Serif', serif;
+text-shadow: 2px 2px #2d283e;
+margin-left: 510px;
+}
+
+.placeHeader {
+margin-left: -20px;
+  font-size: 20px;
+font-family: 'Vollkorn', serif;
+font-weight: bold;
+color: #015249;
+text-shadow: 1px 1px #2d283e;
+}
+
+.newPlace a {
+  position: absolute;
+float: right;
+  padding: 10px;
+  margin-top: 250px;
+  margin-left: -420px;
+  font-family: 'Vollkorn', serif;
+  font-size: 30px;
+  color: #f6f084;
+  background-color: #eb6e80;
+  border: 4px solid #f6f084;
+
+}
+
+.newPlace a:hover {
+  background-color: #d9d9d9;
+  text-shadow: 2px 2px #2d283e;
+}
+table {
+  padding: 7px;
+  border-radius: 20px;
+  float: left;
+  margin-top: 100px;
+  margin-left: 175px;
+  background-color: rgba(246, 240, 132, 0.5)
+}
+.placeInfo {
+font-weight: bold;
+font-family: 'Arapey', serif;
+ font-size: 20px;
+}
+
+.placeButton a {
+  color: #985e6d;
+  font-size: 20px;
+font-family: 'Passion One', cursive;
+text-shadow: 1px 1px #2d283e;
+}
+
+.placeButton a:hover {
+  color: #015249;
+
+}
+.placesNote {
+  font-weight: bold;
+font-family: 'Arapey', serif;
+ font-size: 20px;
+ text-align: center;
+}
+.btn.btn-info.get_location {
+  height: 40px;
+margin-top: 50px;
+background-color: #a7b3a5;
+border: 4px dotted #f6f084;
+font-family: 'Arapey', serif;
+font-size: 18px;
+margin-left: 450px;
+}
+.btn.btn-info.get_location:hover {
+  background-color: #015249;
+  color: #d9d9d9;
+}
+
+
+.address {
+font-family: 'Arapey', serif;
+font-weight: bold;
+font-size: 18px;
+margin-left: 450px;
+color: #f6f084;
+}
+.placeNameSubmit {
+
+  margin-top: 15px;
+background-color: #a7b3a5;
+height: 25px;
+font-family: 'Arapey', serif;
+font-size: 18px;
+margin-left: 0px;
+}
+.placeNameSubmit:hover {
+  background-color: #015249;
+  color: #d9d9d9;
+}
+
+.showTitle {
+  font-size: 20px;
+font-family: 'Balthazar', serif;
+
+}
+
+.googleImg {
+  margin-top: -100px;
+margin-left: 500px;
+}
+
+.googleLink {
+  float: left;
+font-family: 'Patua One', cursive;
+font-size: 20px;
+color: #f6f084;
+background-color: rgba(217, 217, 217, 0.5);
+padding: 5px;
+text-shadow: 1px 1px #2d283e;
+margin-top: 50px;
+margin-left: 150px;
+
+}
+.googleLink:hover {
+  color: #b56357;
+}
+.showPlaceContainer {
+  position: absolute;
+  text-align: center;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+.editPlaceTitle {
+  position: absolute;
+  font-family: 'Patua One', cursive;
+  color: #015249;
+  text-shadow: 2px 2px #d9d9d9;
+  margin-left: 400px;
+  margin-top: 150px;
+}
+.editDiv {
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  font-family: 'Vollkorn', serif;
+  color: #015249;
+  text-shadow: 1px 1px #d9d9d9;
+  margin-top: 150px;
+  margin-left: 500px;
+}
+
+#buttonPlace input {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #015249;
+  background-color: #eb6e80;
+  text-shadow: 1px 1px #d9d9d9;
+  font-family: 'Vollkorn', serif;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+#buttonPlace input:hover {
+  color: #eb6e80;
+  background-color: #015249;
+}
+
+.placeLink a {
+  position: absolute;
+  display: inline-flex;
+  margin-top: 350px;
+  margin-left: -750px;
+  justify-content: center;
+ float: left;
+ background-color: rgba(217, 217, 217, 0.5);
+padding: 5px;
+text-shadow: 1px 1px #2d283e;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Vollkorn', serif;
+  color: #015249;
+  text-shadow: 1px 1px #d9d9d9;
+}
+.placeLink a:hover {
+color: #eb6e80;
+}
+.placeLink2 a:hover {
+color: #eb6e80;
+}
+.placeLink2 a {
+  position: absolute;
+  display: inline-flex;
+  margin-top: 350px;
+  margin-left: -620px;
+background-color: rgba(217, 217, 217, 0.5);
+padding: 5px;
+text-shadow: 1px 1px #2d283e;
+  justify-content: center;
+ float: left;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Vollkorn', serif;
+  color: #015249;
+  text-shadow: 1px 1px #d9d9d9;
+}
+.addPlaceTitle {
+  position: absolute;
+  font-family: 'Patua One', cursive;
+  color: #015249;
+  text-shadow: 2px 2px #d9d9d9;
+  margin-left: 550px;
+  margin-top: 150px;
+}
+
+.placeLinkAdd a {
+  position: absolute;
+  display: inline-flex;
+  margin-top: 360px;
+  margin-left: -685px;
+  justify-content: center;
+ float: left;
+ background-color: rgba(217, 217, 217, 0.5);
+padding: 5px;
+text-shadow: 1px 1px #2d283e;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Vollkorn', serif;
+  color: #015249;
+  text-shadow: 1px 1px #d9d9d9;
+}
+.placeLinkAdd a:hover {
+color: #eb6e80;
+}
+
+.directions {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px;
+  float: left;
+  text-align: center;
+  font-family: 'Arapey', serif;
+  color: #015249;
+  background-color: rgba(152, 94, 96, 0.8);
+  text-shadow: 1px 1px #2d283e;
+  border-radius: 20px;
+}

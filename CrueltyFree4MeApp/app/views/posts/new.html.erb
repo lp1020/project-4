@@ -1,16 +1,16 @@
-<h1>Add a post</h1>
+<h1 class="addTitle">Add a post</h1>
 
-<form action="<%= @posts %>" method="POST">
+<form action="<%= posts_url %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-
-  <label for="name">Company Name</label>
+<div class="form-container">
+  <label for="name" class="postForm">Company Name</label>
   <br>
   <input id="name" type="text" name="post[name]" />
 
   <br>
-  <label for="category_id">Category
+  <label for="category_id" class="postForm">Category
   <!-- <textarea id="category" name="post[category_id]"></textarea> -->
-  <select name="post[category_id]" type="text" id="category">
+  <select name="post[category_id]" type="text" id="category_id">
     <option value='null'>Select</option>
     <option value='1'>Cosmetics</option>
     <option value='2'>Skincare</option>
@@ -23,8 +23,8 @@
   </select>
 </label>
 <br>
-  <label for="is_cruelty_free">Cruelty Free?
-  <select name="post[is_cruelty_free]" type="text" id="iscrueltyfree">
+  <label for="is_cruelty_free" class="postForm">Cruelty Free?
+  <select name="post[is_cruelty_free]" type="text" id="is_cruelty_free">
     <option value='null'>Select</option>
     <option value='true'>Cruelty-Free</option>
     <option value='false'>NOT Cruelty-Free</option>
@@ -33,9 +33,10 @@
     <br>
   <!-- <input id="is_cruelty_free" type="text" name="post[is_cruelty_free]" /> -->
   <br>
-  <label for="link">Link to Company Homepage</label>
+  <label class="postForm" for="link">Link to Company Homepage</label>
   <br>
   <input id="link" type="text" name="post[link]" />
   <br>
-  <input type="submit" value="Save" />
+  <input class="addButton" type="submit" value="Add It!" />
 </form>
+<div class="form-container">

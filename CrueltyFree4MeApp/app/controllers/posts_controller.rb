@@ -12,12 +12,13 @@ class PostsController < ApplicationController
   end
   def all
     @posts = Post.all
+
     @category = Category.all
   end
   def create
-    post = Post.new(post_params)
-    post.user = current_user
-    post.save!
+    @post = Post.new(post_params)
+    @post.user = current_user
+    @post.save!
     redirect_to posts_url
   end
 def edit

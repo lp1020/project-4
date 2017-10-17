@@ -1,11 +1,7 @@
 
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>
-  </li>
-<% end %>
 
+<%= react_component 'Welcome' %>
+<div id="welcomeInfo">
+  <h2 id="welcomeExplain">Your Cruelty-Free Destination</h2>
+<h2 id="welcomeEmail"><%= "Welcome, #{current_user.email}!" %></h2>
+</div>

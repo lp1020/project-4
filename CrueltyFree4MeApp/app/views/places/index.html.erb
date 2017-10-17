@@ -1,14 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Places</h1>
+<h2 class="directions">Increase your impact and keep track of cruelty-free shops in your area. Find vegetarian
+restaurants with the button below the table and add them to your places! </h2>
+<div class="newPlace"><%= link_to 'New Place', new_place_path %></div>
+<h1 class="placesTitle">My Places</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
+      <th class="placeHeader">Name</th>
+      <th class="placeHeader">Address</th>
+      <th class="placeHeader">Latitude</th>
+      <th class="placeHeader">Longitude</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +20,7 @@
 </table>
 
 <br>
-<%= link_to 'New Place', new_place_path %>
-<%= content_tag :button, 'Find Cruelty-Free Stores Around Me!', class: 'btn btn-info get_location' %>
-<p>Note: Stores listed may not have all cruelty-free products! Always check the brands stores carry to make sure they are cruelty-free.</p>
+
+<%= content_tag :button, 'Find Vegetarian Restaurants Around Me!', class: 'btn btn-info get_location' %>
+
 <%= tag :div, class: 'location_results_list' %>

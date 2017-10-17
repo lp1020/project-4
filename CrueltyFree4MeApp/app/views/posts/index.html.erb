@@ -1,29 +1,32 @@
 
-<%= link_to "Add a post", new_post_url %>
-
-<h1>Your Entries</h1>
+<h3 class="addPost"><%= link_to "Add a post", new_user_post_path %></h3>
+<div id="allDiv">
+<h1 id="titleIndex">Your Entries</h1>
 <% @posts.where(user_id: current_user.id).each do |post| %>
-  <div>
-    <h3 class="postLink"><%= link_to post.name, post_path(post) %></h3>
+  <div class= "postContainer3">
+    <h3 class="showLink"><%= link_to post.name, post_path(post) %></h3>
 
-    <p><%= @category.where(id: post.category_id).pluck(:name).first %></p>
+    <p class="postCat">Category: <%= @category.where(id: post.category_id).pluck(:name).first %></p>
 
-    <p>Cruelty Free? <%= post.is_cruelty_free.to_s.capitalize %></p>
-    <a href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
-    <p>Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
-
+    <p class="postInfo">Cruelty Free?<p id="postBoolean"> <%= post.is_cruelty_free.to_s.capitalize %></p></p>
+    <a class="brandLink" href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
+    <p class="postInfo">Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+  <p class="postInfo">Updated at: <%= post.updated_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
   </div>
 <% end %>
 
-<h1>Other Entries</h1>
+<h1 id="titleIndex2">Other Entries</h1>
 <% @posts.where.not(user_id: current_user.id).each do |post| %>
-  <div>
-    <h3 class="postLink"><%= link_to post.name, post_path(post) %></h3>
-    <p><%= @category.where(id: post.category_id).pluck(:name).first %></p>
-    <p>Cruelty Free? <%= post.is_cruelty_free.to_s.capitalize %></p>
-    <a href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
-    <p><%= "By: #{post.user.email}" %></p>
-    <p>Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
-
+  <div class= "postContainer3">
+    <h3 class="showLink"><%= link_to post.name, post_path(post) %></h3>
+    <p class="postCat"><%= @category.where(id: post.category_id).pluck(:name).first %></p>
+    <p class="postInfo">Cruelty Free?<p id="postBoolean">  <%= post.is_cruelty_free.to_s.capitalize %></p></p>
+    <a class="brandLink" href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
+    <p class="postInfo"><%= "Posted by: #{post.user.email}" %></p>
+    <p class="postInfo">Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
+  <p class="postInfo">Updated at: <%= post.updated_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
   </div>
 <% end %>
+</div>
+
+<h3 class="addPost2"><%= link_to "Add a post", new_user_post_path %></h3>

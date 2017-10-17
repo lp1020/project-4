@@ -13,3 +13,139 @@
  *= require_tree .
  *= require_self
  */
+
+a {
+  text-decoration: none;
+}
+#welcomeDiv{
+background-color: rgba(0, 143, 149, 0.6);
+float: left;
+width: 1260px;
+height: 100px;
+border-radius: 0px;
+padding: 5px;
+box-shadow: 5px 5px 1px #f6f084;
+}
+#title {
+  position: absolute;
+  font-size: 36px;
+  display: inline-block;
+  margin-left: 20px;
+  font-family: 'Balthazar', serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #2d283e;
+}
+#title a {
+  color: #eb6e80;
+}
+
+#title a:hover {
+  color: #f6f084;
+}
+
+.nav a {
+margin-bottom: 20px;
+  color: #f6f084;
+  margin-top: -22px;
+}
+
+.nav a:hover {
+  color: #eb6e80;
+}
+
+.nav {
+  font-size: 22px;
+  display: inline-flex;
+  float: right;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: 15px;
+  font-family: 'Balthazar', serif;
+  text-shadow: 1px 1px #2d283e;
+}
+#footer {
+
+  background-color: rgba(246, 240, 132, 0.6);
+  position: absolute;
+  height: 50px;
+  width: 1260px;
+  margin-top: 1200px;
+
+  padding-top: 3%;
+}
+#footerMessage {
+  margin-top: -20px;
+  margin-left: 475px;
+  color: #008f95;
+  font-size: 30px;
+  display: inline-flex;
+  font-weight: bold;
+  font-family: 'Balthazar', serif;
+  text-shadow: 1px 1px #2d283e;
+}
+
+.logIn {
+
+  position: absolute;
+  color: #f6f084;
+  font-size: 30px;
+  font-family: 'Balthazar', serif;
+  text-shadow: 1px 1px #2d283e;
+  text-align: center;
+  margin-top: 120px;
+  margin-left: 555px;
+}
+
+.LoginDiv {
+  text-align: center;
+  position: absolute;
+  margin-top: 175px;
+  margin-left: 525px;
+  font-family: 'Balthazar', serif;
+  font-size: 18px;
+}
+
+#loginButton input {
+  margin-top: 10px;
+background-color: #f6f084;
+  font-size: 16px;
+  font-family: 'Balthazar', serif;
+  text-shadow: 1px 1px #2d283e;
+}
+#loginButton input:hover {
+  background-color: #eb6e80;
+}
+.signUp a {
+ position: absolute;
+ margin-top: 300px;
+ margin-left: -800px;
+  width: 150px;
+color: #f6f084;
+  font-size: 18px;
+  font-family: 'Balthazar', serif;
+  text-shadow: 1px 1px #2d283e;
+}
+
+.signUp a:hover {
+  color: #eb6e80;
+}
+
+.password a {
+  position: absolute;
+  margin-top: 275px;
+ margin-left: -600px;
+  width: 150px;
+  color: #f6f084;
+  font-size: 18px;
+  font-family: 'Balthazar', serif;
+  text-shadow: 1px 1px #2d283e;
+}
+
+.password a:hover {
+  color: #eb6e80;
+}
+
+img {
+  margin-top: 15px;
+  margin-left: 15px;
+}

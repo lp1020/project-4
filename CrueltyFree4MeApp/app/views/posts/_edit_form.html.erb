@@ -1,11 +1,11 @@
 <%= form_for(@post) do |f| %>
 <div class="form-container">
-<div class="bandForm">
+<div class="postForm">
   <%= f.label :name %>
   <%= f.text_field :name %>
 </div>
 
-  <label for="category_id">Category
+  <label for="category_id" class="postForm">Category
   <select name="post[category_id]" type="text" id="category_id">
     <option value='null'>Select</option>
     <option value='1'>Cosmetics</option>
@@ -18,10 +18,9 @@
     <option value='8'>Animal Care</option>
   </select>
 </label>
-</div>
 
-</div>
-<div class="bandForm">
+
+<div class="postForm">
   <label for="is_cruelty_free">Cruelty Free?
   <select name="post[is_cruelty_free]" type="text" id="is_cruelty_free">
     <option value='null'>Select</option>
@@ -30,11 +29,11 @@
   </select>
     </label>
 </div>
-<div class="bandForm">
-  <%= f.label :link %>
+<div class="postForm">
+  <%= f.label :homepage %>
   <%= f.text_field :link %>
 </div>
-<div class="bandButton">
+<div class="editButton">
   <%= f.submit %>
   </div>
 
