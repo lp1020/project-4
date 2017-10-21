@@ -3,9 +3,7 @@
   <h1 id="catTitle">Categories</h1>
 <% @categories.each do |c| %>
 <div class="catDiv">
-<h3 class="catName"><%= c.name %></h3>
-
-<p class="catBrand"><%= @posts.where(category_id: c.id).pluck(:name).first%></p>
+<h3 class="catName"><%= link_to c.name, category_path(c) %></h3>
 
 </div>
 <% end %>

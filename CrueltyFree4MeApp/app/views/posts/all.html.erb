@@ -2,13 +2,14 @@
   <h1 class="categoryView"><%= link_to 'View By Category', categories_path%></h1>
 <h1 id="titleAll">Cruelty-Free Brands</h1>
 <h3 class="indexLink"><%= link_to 'View My Posts', user_posts_path(current_user) %></h3>
+<h3 class="addPost2"><%= link_to "Add a post", new_user_post_path(current_user) %></h3>
 <% @posts.where(is_cruelty_free: true).each do |post| %>
   <div class= "postContainer">
     <h3 class="showLink"><%= link_to post.name, post_path(post) %></h3>
   <p class="postCat">Category: <%= @category.where(id: post.category_id).pluck(:name).first %></p>
     <p class="postInfo">Cruelty Free? <p id="postBoolean"><%= post.is_cruelty_free.to_s.capitalize %></p></p>
     <a class="brandLink" href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
-
+    <p class="postInfo"><%= "Posted by: #{post.user.email}" %></p>
     <p class="postInfo">Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
     <p class="postInfo">Updated at: <%= post.updated_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
   </div>
@@ -21,7 +22,7 @@
   <p class="postCat">Category: <%= @category.where(id: post.category_id).pluck(:name).first %></p>
     <p class="postInfo">Cruelty Free? <p id="postBoolean"><%= post.is_cruelty_free.to_s.capitalize %></p></p>
     <a class="brandLink" href=<%= post.link %>>Go to <%= post.name %> Homepage</a>
-
+  <p class="postInfo"><%= "Posted by: #{post.user.email}" %></p>
     <p class="postInfo">Posted at: <%= post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
     <p class="postInfo">Updated at: <%= post.updated_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
   </div>

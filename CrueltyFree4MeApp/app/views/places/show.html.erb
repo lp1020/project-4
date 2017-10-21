@@ -12,6 +12,11 @@
 </p>
 
 <p class="showTitle">
+  <strong>Notes:</strong>
+  <%= @place.notes %>
+</p>
+
+<p class="showTitle">
   <strong>Latitude:</strong>
   <%= @place.latitude %>
 </p>
@@ -20,6 +25,7 @@
   <strong>Longitude:</strong>
   <%= @place.longitude %>
 </p>
+
 
 <div class="showLink"><%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %></div>

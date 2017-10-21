@@ -5,6 +5,7 @@
 
     <p class="postInfoShow">Cruelty Free?<p id="postBooleanShow"> <%= @post.is_cruelty_free.to_s.capitalize %></p></p>
     <a class="brandLinkShow"href=<%= @post.link %>>Go to <%= @post.name %> Homepage</a>
+  <p class="postInfoShow"><%= "Posted by: #{@post.user.email}" %></p>
     <p class="postInfoShow">Posted at: <%= @post.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
     <p class="postInfoShow">Updated at: <%= @post.updated_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime('%B %e at %l:%M %p')%></p>
     </div>

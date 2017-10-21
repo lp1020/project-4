@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 cosmetics = Category.create!(name: 'Cosmetics')
 skincare = Category.create!(name: 'Skincare')
 household_cleaning = Category.create!(name: 'Household/Cleaning')
@@ -26,3 +25,7 @@ Post.create!(name: 'Bath & Body Works', category_id: body_care.id, is_cruelty_fr
 Post.create!(name: 'Bath & Body Works', category_id: fragrance.id, is_cruelty_free: true, link: 'http://www.bathandbodyworks.com/')
 
 puts "#{Post.count} posts created!"
+
+
+
+

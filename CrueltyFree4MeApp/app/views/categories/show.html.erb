@@ -1,5 +1,7 @@
-<h3><%= @category.name %></h3>
-
-  <h3 class="post"><%= link_to @posts.name, post_path(@posts)%></h3>
-  <br>
+<h3 class="categoryShowName"><%= @category.name %></h3>
+<div class='category-post-div'>
+  <% @posts.each do |p|%>
+  <h3 class="catPosts"><%= link_to p.name, post_path(p)%></h3>
+  <% end %>
+</div>
 
